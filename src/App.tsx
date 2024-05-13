@@ -4,9 +4,10 @@ import { Header } from './components/Header';
 import { Input } from './components/Input';
 import { ButtonCreate } from './components/ButtonCreate';
 import { EmptyList } from './components/EmptyList';
+import { ListHeader } from './components/ListHeader';
+
 
 import styles from './App.module.css'
-
 export function App() {
   const tasks = []
 
@@ -26,7 +27,10 @@ export function App() {
           {
             tasks.length === 0
               ? (
-                <EmptyList />
+                <div>
+                  <ListHeader />
+                  <EmptyList />
+                </div>
               )
               : (
                 <p>{tasks.length}</p>
@@ -34,7 +38,7 @@ export function App() {
           }
         </section>
 
-      </main>
+      </main >
     </>
   );
 }
