@@ -1,3 +1,9 @@
+.content {
+    margin: 0 22rem;
+}
+
 .search {
     transform: translateY(-50%);
+    display: flex;
+    gap: 0.5rem;
 }
