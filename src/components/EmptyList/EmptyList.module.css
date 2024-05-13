@@ -1,0 +1,15 @@
+.content {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin: 4rem 1.5rem;
+    font-size: 1rem;
+    color: var(--gray-300);
+    line-height: 140%;
+}
+
+.content span {
+    margin-top: 1rem;
+    font-weight: bold;
+}
