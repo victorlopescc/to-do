@@ -3,10 +3,14 @@
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    margin: 4rem 1.5rem;
+    margin: 1.5rem 0;
     font-size: 1rem;
     color: var(--gray-300);
     line-height: 140%;
+
+    border-top: 1px solid var(--gray-500);
+    border-radius: 0.5rem;
+    padding-top: 4rem;
 }
 
 .content span {
