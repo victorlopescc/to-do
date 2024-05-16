@@ -1,9 +1,14 @@
 import styles from './Count.module.css'
 
-export function Count() {
+interface Props {
+    taskCounter: number;
+}
+
+export function Count({ taskCounter }: Props) {
     return (
-        <div className={styles.content}>
-            <p>0</p>
-        </div>
+        <aside className={styles.container}>
+            <p>Tarefas Criadas</p>
+            <span>{taskCounter}</span>
+        </aside>
     )
 }

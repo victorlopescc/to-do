@@ -1,13 +1,17 @@
-import { CompleteCount } from "../CompleteCount";
-import { CreateCount } from "../CreateCount";
-
+import { CompleteCount } from '../CompleteCount';
+import { Count } from '../Count';
 import styles from './ListHeader.module.css';
 
-export function ListHeader() {
+interface Props {
+    taskCounter: number;
+    completedCounter: number;
+}
+
+export function ListHeader({ taskCounter, completedCounter }: Props) {
     return (
-        <div className={styles.content}>
-            <CreateCount />
-            <CompleteCount />
+        <div className={styles.container}>
+            <Count taskCounter={taskCounter} />
+            <CompleteCount taskCounter={taskCounter} completedCounter={completedCounter} />
         </div>
     )
 }
