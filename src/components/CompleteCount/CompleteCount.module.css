@@ -1,9 +1,19 @@
-.content {
+.container {
     display: flex;
-    gap: 0.5rem
+    align-items: center;
+    gap: 0.5rem;
+    font-weight: bold;
+    color: var(--purple);
 }
 
-.content span {
-    color: var(--purple);
+.container p {
     font-size: 0.875rem;
+}
+
+.container span {
+    padding: 2px 8px;
+    border-radius: 16px;
+    font-size: 0.75rem;
+    color: var(--gray-200);
+    background-color: var(--gray-400);
 }

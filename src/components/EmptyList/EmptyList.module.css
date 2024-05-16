@@ -1,19 +1,15 @@
-.content {
+.container {
+    padding: 4rem 1rem;
+    border-top: 1px solid var(--gray-400);
+    border-radius: 0.5rem;
     display: flex;
     flex-direction: column;
-    justify-content: center;
     align-items: center;
-    margin-top: 1.5rem;
-    font-size: 1rem;
+    gap: 1rem;
     color: var(--gray-300);
-    line-height: 140%;
-
-    border-top: 1px solid var(--gray-500);
-    border-radius: 0.5rem;
-    padding-top: 4rem;
 }
 
-.content span {
-    margin-top: 1rem;
-    font-weight: bold;
+.container p {
+    display: flex;
+    flex-direction: column;
 }

@@ -1,15 +1,13 @@
 import styles from './ButtonCreate.module.css'
 
-interface ButtonProps {
-    children: React.ReactNode
-}
+type ButtonType = React.DetailedHTMLProps<
+    React.ButtonHTMLAttributes<HTMLButtonElement>,
+    HTMLButtonElement
+>
 
-export function ButtonCreate({ children, ...rest }: ButtonProps) {
+export function ButtonCreate({ children, ...rest }: ButtonType) {
     return (
-        <button
-            className={styles.button}
-            {...rest}
-        >
+        <button className={styles.button} {...rest}>
             {children}
         </button>
     )

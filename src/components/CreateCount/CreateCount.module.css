@@ -1,9 +1,0 @@
-.content {
-    display: flex;
-    gap: 0.5rem
-}
-
-.content span {
-    color: var(--blue);
-    font-size: 0.875rem;
-}

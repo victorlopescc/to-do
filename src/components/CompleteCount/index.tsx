@@ -1,12 +1,21 @@
-import { Count } from '../Count';
-
 import styles from './CompleteCount.module.css';
 
-export function CompleteCount() {
+interface Props {
+    taskCounter: number;
+    completedCounter: number;
+}
+
+export function CompleteCount({ taskCounter, completedCounter }: Props) {
     return (
-        <div className={styles.content}>
-            <span>Concluídas</span>
-            <Count />
-        </div>
+        <aside className={styles.container}>
+            <p>Concluídas</p>
+            <span>
+                {
+                    taskCounter === 0
+                        ? completedCounter
+                        : `${completedCounter} de ${taskCounter}`
+                }
+            </span>
+        </aside>
     )
 }
