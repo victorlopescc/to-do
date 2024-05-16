@@ -51,7 +51,7 @@ export function App() {
 
   function handleToggle({ id, value }: { id: string; value: boolean }) {
     const updatedTasks = tasks.map((task) => {
-      if (task.id === id) return { ...task, isChecked: value }
+      if (task.id === id) return { ...task, isCompleted: value }
 
       return { ...task }
     })
