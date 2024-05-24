@@ -1,5 +1,5 @@
 import { PlusCircle } from '@phosphor-icons/react';
-import { useState } from 'react';
+import { useEffect, useState } from 'react';
 import { v4 as uuidv4 } from 'uuid';
 
 import { Header } from './components/Header';
@@ -21,6 +21,22 @@ export interface TaskInterface {
 export function App() {
   const [tasks, setTasks] = useState<TaskInterface[]>([])
   const [input, setInput] = useState('')
+
+  useEffect(() => {
+    const tasksJson = localStorage.getItem('@todo:tasks')
+
+    if (tasksJson) {
+      const tasks = JSON.parse(tasksJson)
+
+      setTasks(tasks)
+    }
+  }, [])
+
+  useEffect(() => {
+    const tasksJson = JSON.stringify(tasks)
+
+    localStorage.setItem('@todo:tasks', tasksJson)
+  }, [tasks])
 
   const completedTasks = tasks.reduce((prev, current) => {
     if (current.isCompleted) return prev + 1
