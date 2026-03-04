@@ -1,6 +1,6 @@
 # Todo App ✅✨
 
-Aplicação web desenvolvida utilizando **HTML**, **CSS** e **JavaScript**, com foco maior em design e experiência do usuário.
+Aplicação web desenvolvida utilizando **React** e **JavaScript**, com foco maior em design e experiência do usuário.
 
 🔗 Acesse: https://todo.vlopinhos.dev/
 
